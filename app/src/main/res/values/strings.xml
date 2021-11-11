@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Registration V1.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tizimga_kirish">Tizimga kirish</string>
+    <string name="telefon_raqam">Telefon raqam</string>
+    <string name="parol">Parol</string>
+    <string name="name_edt">Fazliddin Toshpulatov</string>
+    <string name="number_edt">+998 97 007 96 20</string>
+</resources>

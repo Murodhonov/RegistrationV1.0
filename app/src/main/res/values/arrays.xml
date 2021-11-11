@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list1">
+        <item>Davlatni tanlang</item>
+        <item>O\'zbekiston</item>
+        <item>USA</item>
+        <item>Россия</item>
+    </string-array>
+</resources>

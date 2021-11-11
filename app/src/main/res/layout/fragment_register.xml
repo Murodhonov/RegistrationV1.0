@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFCFF"
+    tools:context=".Fragments.RegisterFragment">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:text="@string/tizimga_kirish"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/circle_card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/circle_card"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:foreground="@drawable/circle"
+        app:cardCornerRadius="200sp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_title">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/pluss"
+        app:layout_constraintBottom_toBottomOf="@id/circle_card"
+        app:layout_constraintRight_toRightOf="@id/circle_card" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_back"
+        android:hint="Ism, familiya"
+        android:inputType="text"
+        android:paddingLeft="20sp"
+        android:textColor="@color/brandColor"
+        android:textColorHint="@color/brandColor"
+        app:layout_constraintBottom_toTopOf="@id/phone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circle_card"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_back"
+        android:hint="Telefon raqam"
+        android:inputType="phone"
+        android:paddingLeft="20sp"
+        android:textColor="@color/brandColor"
+        android:textColorHint="@color/brandColor"
+        app:layout_constraintBottom_toTopOf="@id/country"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <Spinner
+        android:id="@+id/country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_back"
+        android:entries="@array/list1"
+        android:hint="Ism, familiya"
+        android:paddingLeft="10sp"
+        android:textColor="@color/brandColor"
+        android:textColorHint="@color/brandColor"
+        app:layout_constraintBottom_toTopOf="@id/address"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:src="@drawable/arrowdown"
+        app:layout_constraintBottom_toBottomOf="@id/country"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="@id/country"
+        app:layout_constraintRight_toRightOf="@id/country"
+        app:layout_constraintTop_toTopOf="@id/country" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_back"
+        android:hint="Manzil"
+        android:inputType="text"
+        android:paddingLeft="20sp"
+        android:textColor="@color/brandColor"
+        android:textColorHint="@color/brandColor"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_back"
+        android:hint="Parol"
+        android:inputType="textPassword"
+        android:paddingLeft="20sp"
+        android:textColor="@color/brandColor"
+        android:textColorHint="@color/brandColor"
+        app:layout_constraintBottom_toTopOf="@id/enter_btn"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/enter_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:outlineAmbientShadowColor="#FF166BFA"
+        android:outlineSpotShadowColor="#FF166BFA"
+        app:cardBackgroundColor="#FF166BFA"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toTopOf="@id/about"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintWidth_percent="0.87">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Version 1.0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
